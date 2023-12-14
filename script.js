@@ -20,9 +20,9 @@ let remainingTime;
 
 function startTimer(event) {
     event.preventDefault();
-    const hours = parseInt(hoursInput.value);
-    const minutes = parseInt(minutesInput.value);
-    const seconds = parseInt(secondsInput.value);
+    const hours = parseInt(hoursInput.value ? hoursInput.value : 0);
+    const minutes = parseInt(minutesInput.value ? minutesInput.value : 0);
+    const seconds = parseInt(secondsInput.value ? secondsInput.value : 0);
     remainingTime = hours * 3600 + minutes * 60 + seconds;
     setTimeout(() => {
         intervalId = setInterval(updateTimer, 1000);
