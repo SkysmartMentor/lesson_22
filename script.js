@@ -29,7 +29,7 @@ function startTimer(event) {
         hideElement(startButton);
         showElement(stopButton);
         setTimeout(() => {
-            stopButton.style.opacity = 0.05;
+            stopButton.style.opacity = 0.1;
         }, 1000)
         document.documentElement.requestFullscreen();
     }, 1000);
